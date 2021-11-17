@@ -81,6 +81,12 @@ function App() {
     setIndex(undefined);
     setEditInput('');
   };
+
+  const handleCancel = () => {
+    setView('read');
+    setIndex(undefined);
+    setEditInput('');
+  };
   return (
     <div>
       {view === 'read' && (
@@ -112,6 +118,7 @@ function App() {
             onChange={(event) => handleEditInputChange(event)}
           />
           <button onClick={handleSaveClick}>Save</button>
+          <button onClick={handleCancel}>Cancel</button>
         </>
       )}
     </div>
